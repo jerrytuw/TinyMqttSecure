@@ -6,4 +6,5 @@ Based on TinyMqtt https://github.com/hsaturn/TinyMqtt and ESPHTTPSServer https:/
 Modified TinyMqtt code to make use of HTTPSConnection instead of WiFiClient.
    Essential function:
     Sketch for simple MQTTS broker allowing connection of several clients via e.e. port 8883 with TLS.
+
 Provided as is.
