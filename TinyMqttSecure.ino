@@ -44,8 +44,8 @@ MqttBroker broker(&cert, PORT);
   *  
   */
 
-const char* ssid = "itoilet";
-const char* password = "project2017";
+const char* ssid = "";
+const char* password = "";
 
 
 void setup() 
