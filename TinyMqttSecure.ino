@@ -44,8 +44,8 @@ MqttBroker broker(&cert, PORT);
 
 */
 
-const char* ssid = "Prf-home";
-const char* password = "0987654321";
+const char* ssid = "";
+const char* password = "";
 
 
 void setup()
