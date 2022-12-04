@@ -10,4 +10,15 @@ Just for my application needs I modified TinyMqtt code and combined it with slig
    Essential function tested:
     Simple MQTTS broker allowing communication of several MQTTS clients via e.g. port 8883 with TLS. Clients used were MQTT Explorer, MQTT.fx and own sketches with PubSubClient+WiFiServerSecure.
 
+Note for ESP32 Arduino core versions:
+- 1.0.6: ESP32_HTTPS_Server library compiles as is
+- 2.0.x: in HTTPConnection.hpp  after #include <mbedtls/base64.h>
+ change to
+ ```
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL (4, 4, 0)
+  #include <sha/sha_parallel_engine.h>  
+#else
+  #include <hwcrypto/sha.h>
+#endif
+```
 ## Provided as is.
