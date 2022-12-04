@@ -13,7 +13,7 @@ Just for my application needs I modified TinyMqtt code and combined it with slig
 Note for ESP32 Arduino core versions:
 - 1.0.6: ESP32_HTTPS_Server library compiles as is
 - 2.0.x: in HTTPConnection.hpp  after #include <mbedtls/base64.h>
- change to
+ change "#include <hwcrypto/sha.h>" to
  ```
 #if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL (4, 4, 0)
   #include <sha/sha_parallel_engine.h>  
